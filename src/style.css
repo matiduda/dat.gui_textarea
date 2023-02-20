@@ -4,10 +4,33 @@ body {
 
 /* DAT GUI */
 
+textarea:focus {
+  background-color: #494949 !important;
+  color: #FFFFFF !important;
+}
+
 .dg .closed>li:not(.folder):has(textarea[type=text]) {
   height: 0px !important;
 }
 
 .dg li:not(.folder):has(textarea[type=text]) {
   height: 100% !important;
+}
+
+textarea::-webkit-scrollbar {
+  width: 7px;
+}
+
+textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: rgb(156, 156, 156);
+  border-radius: 5px;
+}
+
+textarea {
+  outline: 0;
 }

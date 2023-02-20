@@ -9,19 +9,18 @@ var dataJSON = {
 };
 
 const object = {
-	name: "Mateusz",
-	surname: "Duda",
-	money: "234zl",
-	age: 24
-}
+	name: "Name",
+	surname: "Surname",
+	money: "50",
+	age: 32
+};
 
 const gui = new dat.GUI();
-
-const folder = gui.addFolder("Custom scenario");
+const folder = gui.addFolder("Custom");
 
 const changeInput = folder.add(object, 'name');
 
-function updateScenarioFromJSON(json) {
+function updateFromJSON(json) {
 	console.log(JSON.parse(json));
 }
 
@@ -36,15 +35,15 @@ function insertTextArea(controller: dat.GUIController) {
 	textArea.setAttribute("type", "text");
 	textArea.setAttribute("spellcheck", "false");
 	textArea.value = JSON.stringify(object, undefined, 2);
-	textArea.onchange = (event) => updateScenarioFromJSON(event.target.value);
+	textArea.onchange = (event) => updateFromJSON(event.target.value);
 	const textAreaStyle = `
 		margin-top: 10px;
 		width: calc(100% - 10px);
 		padding-right: 5px;
 		resize: vertical;
 		border: none;
-		background-color: #0C0C0C;
-		color: #AFAFAF;
+		background-color: #303030;
+		color: #1ec453;
 	`
 	textArea.setAttribute("style", textAreaStyle);
 
