@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+
+/* DAT GUI */
+
+.dg .closed>li:not(.folder):has(textarea[type=text]) {
+  height: 0px !important;
+}
+
+.dg li:not(.folder):has(textarea[type=text]) {
+  height: 100% !important;
+}
